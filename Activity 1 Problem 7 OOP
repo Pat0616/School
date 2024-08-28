@@ -1,0 +1,25 @@
+import java.io.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+		BufferedReader dataIn = new BufferedReader (new InputStreamReader(System.in));
+		Double Radius, Area = .0;
+		 Double pi = 3.1416;
+		String input = "";
+		
+    		try
+    		{
+    		    System.out.println("Enter the value of radius: ");
+    		    input = dataIn.readLine();
+    		    Radius = Double.parseDouble(input);
+    		    Area = pi * (Radius * Radius);
+    		} 
+    		catch(IOException e)
+    		{
+    		    System.out.println("Error");
+    		}
+    		
+    	System.out.println("The area is " + Area);
+	}
+}
